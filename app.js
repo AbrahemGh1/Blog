@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const morgan= require('morgan');
 app.set('view engine','ejs');
+const dbURI='mongodb+srv://Abrahem:testman1@blogapp.n8jtk.mongodb.net/<dbname>?retryWrites=true&w=majority'
 
 app.listen(3000);
 app.use(morgan('dev'));
