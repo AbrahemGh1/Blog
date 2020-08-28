@@ -1,28 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-</head>
-
+    <%- include('./partials/head.ejs') %>
 <body>
-
-    <nav>
-        <div class="site-title">
-            <a href="/">
-                <h1>Blog </h1>
-            </a>
-            <p>A Net Site</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
-    <div class="blogs content">
+    <%- include('./partials/nav.ejs') %>
+    <div class="create-blog content">
         <form>
             <label for="tilte">Blog title</label>
             <input type="text" id="title" required>
@@ -33,5 +14,6 @@
             <button>Submit</button>
         </form>
     </div>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
