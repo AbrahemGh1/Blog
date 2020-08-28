@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
+const morgan= require('morgan');
 app.set('view engine','ejs');
 
 app.listen(3000);
+app.use(morgan('dev'));
 
+//middleware & static files
+app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
@@ -18,6 +22,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about',{title:"about"});
 });
+
 app.get('/blogs/create', (req, res) => {
     res.render('create',{title:"Create new blog"});
 
@@ -25,7 +30,6 @@ app.get('/blogs/create', (req, res) => {
 
 app.use((req,res)=>{
     res.status(404).render('404',{title:"404"});
-
 });
 
 
