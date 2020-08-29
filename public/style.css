@@ -109,3 +109,14 @@ textarea{
   cursor: pointer;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 }
+.snippet{
+  background-color:whitesmoke;
+}
+.footer span {
+  color:crimson;  
+}
+
+.footer  {
+  background-color:#444;
+  color:whitesmoke
+}
